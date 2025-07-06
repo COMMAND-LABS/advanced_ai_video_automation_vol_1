@@ -1,14 +1,13 @@
 # TLDR
 
-Advanced A.I. Video Automation
+Welcome to Advanced A.I. Video Automation Vol. 1
 
 ## ToC
 
-1. `intro.md`
-2. `example_1.md`
-3. `example_2.md`
-4. `example_3.md`
-5. `outro.md`
+1. Check out `chapters/intro.md`
+2. Check out `chapters/example_1.md`
+3. Check out `chapters/example_2.md`
+4. Check out `chapters/example_3.md`
 
 ## Customizing the transcription
 
