@@ -1,6 +1,16 @@
 # TLDR
 
-Details regarding Example 3
+Details regarding Example 3 incorporating HeyGen
+
+## High level steps
+
+1. Write a script
+1. Read & record the script either yourself or using Eleven Labs
+1. Break the full audio performance of the script into parts
+1. Generate an AI Motion Avatar Video that performs the full script
+1. Generate images for each part of the script
+1. Select which images to cut to as B-roll
+1. Stitch all the media together into the final video
 
 ## Script
 

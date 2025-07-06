@@ -1,6 +1,14 @@
 # TLDR
 
-Details regarding Example 2
+Details regarding Example 2 incorporating Veo 3
+
+## High level steps
+
+1. Write a script
+1. Read & record the script either yourself or using Eleven Labs
+1. Break the full audio performance of the script into parts
+1. Generate video clips for each part of the script
+1. Stitch all the media together into the final video
 
 ## Script
 

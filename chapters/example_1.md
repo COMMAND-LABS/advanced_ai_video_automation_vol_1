@@ -1,6 +1,15 @@
 # TLDR
 
-Details regarding Example 1
+Details regarding Example 1 incorporating Kling v2.1
+
+## High level steps
+
+1. Write a script
+1. Read & record the script either yourself or using Eleven Labs
+1. Break the full audio performance of the script into parts
+1. Generate images for each part of the script
+1. Convert each image into videos using Kling v2.1
+1. Stitch all the media together into the final video
 
 ## Script
 
@@ -17,7 +26,7 @@ Here’s a trick to sound 30% wittier in conversations even if you’re not that
 - Script segmentation: `Whisper` (through the `OpenAI` API) *(audio/text)-2-text
 - Image prompts: `GPT-4o`
 - Images: `Flux Dev` (through `Leonardo.ai`) *(image/text)-2-image
-- Video: `Kling 2.1` (through `fal.ai`) *(image/text)-2-video
+- Video: `Kling v2.1` (through `fal.ai`) *(image/text)-2-video
 - Final Compilation: `JSON2Video`
 
 ## Costs of producing a ~30-second video
