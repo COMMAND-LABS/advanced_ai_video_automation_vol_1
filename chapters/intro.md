@@ -20,8 +20,8 @@ There will be several other tools we will use but we can sign up for those as we
 - Eleven Labs (https://elevenlabs.io/)
 - OpenAI API (https://platform.openai.com/)
 - Leonardo AI (https://leonardo.ai/)
-- Fal.ai
-- HeyGen
+- Fal.ai (https://fal.ai)
+- HeyGen (https://heygen.com/)
 
 Be sure the set reminders to cancel any subscriptions you make as a result of following along with this video as you'll incur hundreds of dollars in SaaS expenses if you don't.
 If you find you need to use any aspects of the systems we will set up you can always turn them back on later or find cheaper alternatives.
