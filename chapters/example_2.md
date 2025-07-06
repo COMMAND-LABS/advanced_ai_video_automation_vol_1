@@ -27,7 +27,7 @@ The truth is there is no right answer. All are valid comebacks. The key to this 
 
 ## Costs of producing a ~30-second video
 
-1. `Claude Desktop` used to write the script
+1. `Claude` used to write the script
   - $20/month
 2. `ElevenLabs` used to convert the script into audio
   - notice how I fine-tuned the generated audio from ElevenLabs on my voice

@@ -18,6 +18,18 @@ Welcome to Advanced A.I. Video Automation Vol. 1
 - Dropbox
 - JSON2Video
 
-### Additional APIs
+### Additional APIs and Tools
 
-- 
+- Eleven Labs (https://elevenlabs.io/)
+  - You could always records yourself as an alternative (honestly might be better 😉)
+- OpenAI API (https://platform.openai.com/)
+  - Whisper & GPT-4o
+- Leonardo AI (https://leonardo.ai/)
+  - Both the webapp and the API
+  - Flux Dev
+- Fal.ai
+  - Kling v2.1
+  - Veo 3
+- HeyGen
+  - Both the webapp and the API
+  - Motion Avatars
