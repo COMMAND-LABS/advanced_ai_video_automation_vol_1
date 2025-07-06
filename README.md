@@ -27,10 +27,10 @@ Welcome to Advanced A.I. Video Automation Vol. 1
 - Leonardo AI (https://leonardo.ai/)
   - Both the webapp and the API
   - Flux Dev
-- Fal.ai
+- Fal.ai (https://fal.ai/)
   - Kling v2.1
   - Veo 3
-- HeyGen
+- HeyGen (https://heygen.com/)
   - Both the webapp and the API
   - Motion Avatars
   
