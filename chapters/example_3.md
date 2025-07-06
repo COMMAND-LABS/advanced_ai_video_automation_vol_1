@@ -56,3 +56,7 @@ Details regarding Example 3
   - $49.95/7,200 credits (~120 minutes of rendered video) after free credits expire
 
 MINIMUM ESTIMATE OF RUNNING THIS SYSTEM AS OF 7/6/2025: $214
+
+## Additional info
+
+HeyGen avatar ID used was: `4906bbce5e1a49d9936a59403c2c8efe`

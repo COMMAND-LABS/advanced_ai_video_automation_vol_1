@@ -1,0 +1,772 @@
+{
+    "name": "Ex. 1 Step 1 - Script to Narrated Audio (ElevenLabs)",
+    "flow": [
+        {
+            "id": 1,
+            "module": "airtable:ActionSearchRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 3256336
+            },
+            "mapper": {
+                "base": "app8M2JP3WTQiAuL2",
+                "table": "tblth2Mek3NT9LShn",
+                "fields": [
+                    "Script ID",
+                    "Script"
+                ],
+                "formula": "{Script ID} = 1 ",
+                "maxRecords": "1",
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "mode": "chose",
+                            "label": "Video Automation"
+                        },
+                        "sort": {
+                            "mode": "chose"
+                        },
+                        "view": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "mode": "chose",
+                            "label": "Full Script"
+                        },
+                        "fields": {
+                            "mode": "chose",
+                            "label": [
+                                "Script ID",
+                                "Script"
+                            ]
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable2"
+                            },
+                            "label": "My Airtable Token or Key connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "formula",
+                        "type": "text",
+                        "label": "Formula"
+                    },
+                    {
+                        "name": "maxRecords",
+                        "type": "integer",
+                        "label": "Limit"
+                    },
+                    {
+                        "name": "sort",
+                        "spec": [
+                            {
+                                "name": "field",
+                                "type": "select",
+                                "label": "Field",
+                                "dynamic": true,
+                                "options": []
+                            },
+                            {
+                                "name": "direction",
+                                "type": "select",
+                                "label": "Direction",
+                                "options": [
+                                    {
+                                        "label": "Descending",
+                                        "value": "desc"
+                                    },
+                                    {
+                                        "label": "Ascending",
+                                        "value": "asc"
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Sort"
+                    },
+                    {
+                        "name": "view",
+                        "type": "select",
+                        "label": "View"
+                    },
+                    {
+                        "name": "fields",
+                        "type": "select",
+                        "label": "Output Fields",
+                        "multiple": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Script ID",
+                        "type": "number",
+                        "label": "Script ID"
+                    },
+                    {
+                        "name": "Script",
+                        "type": "text",
+                        "label": "Script",
+                        "multiline": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "elevenlabs:createTextToSpeech",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 2672186
+            },
+            "mapper": {
+                "text": "{{1.Script}}",
+                "model_id": "eleven_turbo_v2_5",
+                "voice_id": "cEGQKUkjUFtBBn9scZWU",
+                "voice_settings": {}
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "model_id": {
+                            "mode": "chose",
+                            "label": "Eleven Turbo v2.5 (eleven_turbo_v2_5)"
+                        },
+                        "voice_id": {
+                            "mode": "edit"
+                        },
+                        "optimize_streaming_latency": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "elevenlabs"
+                            },
+                            "label": "My ElevenLabs connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:elevenlabs",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "voice_id",
+                        "type": "select",
+                        "label": "Voice",
+                        "required": true
+                    },
+                    {
+                        "name": "model_id",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text",
+                        "required": true
+                    },
+                    {
+                        "name": "voice_settings",
+                        "spec": [
+                            {
+                                "name": "stability",
+                                "type": "number",
+                                "label": "Stability",
+                                "validate": {
+                                    "max": 1,
+                                    "min": 0
+                                }
+                            },
+                            {
+                                "name": "similarity_boost",
+                                "type": "number",
+                                "label": "Similarity Boost",
+                                "validate": {
+                                    "max": 1,
+                                    "min": 0
+                                }
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Voice Settings"
+                    },
+                    {
+                        "name": "optimize_streaming_latency",
+                        "type": "select",
+                        "label": "Optimize Streaming Latency",
+                        "validate": {
+                            "enum": [
+                                "0",
+                                "1",
+                                "2",
+                                "3",
+                                "4"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 2672381
+            },
+            "mapper": {
+                "data": "{{3.data}}",
+                "path": "/projects/advanced_ai_video_automation_vol_1",
+                "filename": "{{3.fileName}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "module": "dropbox:createShareLink",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 2672381
+            },
+            "mapper": {
+                "path": "{{18.path_lower}}",
+                "select": "map",
+                "settings": {}
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "select": {
+                            "label": "Map a file/folder path"
+                        },
+                        "settings": {
+                            "nested": {
+                                "access": {
+                                    "mode": "chose",
+                                    "label": "Empty"
+                                },
+                                "allow_download": {
+                                    "mode": "chose"
+                                },
+                                "require_password": {
+                                    "mode": "chose"
+                                },
+                                "requested_visibility": {
+                                    "mode": "chose",
+                                    "label": "Empty"
+                                }
+                            }
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Way of selecting files",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "file"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "settings",
+                        "spec": [
+                            {
+                                "name": "access",
+                                "type": "select",
+                                "label": "Link's Access Level",
+                                "validate": {
+                                    "enum": [
+                                        "viewer",
+                                        "editor",
+                                        "max"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "expires",
+                                "time": true,
+                                "type": "date",
+                                "label": "Link's Expiration Date"
+                            },
+                            {
+                                "name": "require_password",
+                                "type": "boolean",
+                                "label": "Require Password"
+                            },
+                            {
+                                "name": "link_password",
+                                "type": "text",
+                                "label": "Link's Password"
+                            },
+                            {
+                                "name": "allow_download",
+                                "type": "boolean",
+                                "label": "Allow Download"
+                            },
+                            {
+                                "name": "requested_visibility",
+                                "type": "select",
+                                "label": "Requested Visibility (Deprecated)",
+                                "validate": {
+                                    "enum": [
+                                        "public",
+                                        "team_only",
+                                        "password"
+                                    ]
+                                }
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Settings"
+                    },
+                    {
+                        "name": "path",
+                        "type": "text",
+                        "label": "File Path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "module": "airtable:ActionUpdateRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 3256336
+            },
+            "mapper": {
+                "id": "{{1.id}}",
+                "base": "app8M2JP3WTQiAuL2",
+                "table": "tblth2Mek3NT9LShn",
+                "record": {
+                    "fldJEZhKPIkRyzP7D": [
+                        {
+                            "url": "{{19.downloadUrl}}",
+                            "filename": "{{19.name}}"
+                        }
+                    ]
+                },
+                "typecast": false,
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "label": "Video Automation"
+                        },
+                        "table": {
+                            "label": "Full Script"
+                        },
+                        "record": {
+                            "nested": {
+                                "fldJEZhKPIkRyzP7D": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                }
+                            }
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable2"
+                            },
+                            "label": "My Airtable Token or Key connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "Record ID",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "spec": [
+                            {
+                                "name": "fld9AH7vJdnp6ytpp",
+                                "type": "text",
+                                "label": "Script"
+                            },
+                            {
+                                "name": "fldJEZhKPIkRyzP7D",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ],
+                                "type": "array",
+                                "label": "Narrated Audio"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Record"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Script",
+                        "type": "text",
+                        "label": "Script",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Narrated Audio",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "MIME type"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Small"
+                                    },
+                                    {
+                                        "name": "large",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Large"
+                                    },
+                                    {
+                                        "name": "full",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Full"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Thumbnails"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Narrated Audio"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    }
+}
