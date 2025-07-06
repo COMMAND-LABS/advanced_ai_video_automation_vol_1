@@ -4,11 +4,11 @@ Advanced A.I. Video Automation
 
 ## ToC
 
-1 - `intro.md`
-2 - `example_1.md`
-3 - `example_2.md`
-4 - `example_3.md`
-5 - `outro.md`
+1. `intro.md`
+2. `example_1.md`
+3. `example_2.md`
+4. `example_3.md`
+5. `outro.md`
 
 ## Customizing the transcription
 
