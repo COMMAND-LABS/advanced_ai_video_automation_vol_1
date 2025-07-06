@@ -14,9 +14,9 @@ Welcome to Advanced A.I. Video Automation Vol. 1
 ### Core Tools
 
 - Make
-- Airtable
-- Dropbox
-- JSON2Video
+- Airtable (https://airtable.com/)
+- Dropbox (https://www.dropbox.com/)
+- JSON2Video (https://json2video.com/)
 
 ### Additional APIs and Tools
 
@@ -34,3 +34,10 @@ Welcome to Advanced A.I. Video Automation Vol. 1
   - Both the webapp and the API
   - Motion Avatars
   
+### Regarding Airtable 
+
+Check out `airtable/setup.md`
+
+### Shout outs
+
+Shout out to [Stephen G. Pope](https://www.youtube.com/c/stephengpope)
