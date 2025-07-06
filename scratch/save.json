@@ -1,0 +1,34 @@
+{
+  "comment": "Sonnet 18",
+  "resolution": "instagram-story",
+  "quality": "high",
+  "scenes": [],
+  "elements": [
+      {
+          "type": "video",
+          "src": "https://www.dropbox.com/scl/fi/v0m82smqb5u2671k6bxuv/example_3.mp4?rlkey=n03p4taidj6wdjq213jnblz2n&st=4bgdsxlq&dl=1"
+      },
+      {
+          "type": "subtitles",
+          "captions": "",
+          "settings": {
+              "font-family": "LeagueSpartan-Bold",
+                      "font-url": "https://www.dropbox.com/scl/fi/mec6z39upttn5sl9hhauh/LeagueSpartan-Bold.ttf?rlkey=o3elhdrbn29561340w42yrey8&st=0pbdjp00&dl=1",
+                      "box-color": "#000000",
+                      "font-size": 240,
+                      "word-color": "#FFFFFF",
+                      "position": "mid-bottom-center",
+                      "style": "boxed-line",
+                      "outline-color": "#000000",
+                      "outline-width": 2,
+                      "shadow-color": "#000000",
+                      "shadow-offset": 4,
+                      "max-words-per-line": 3
+          }
+      },
+      {
+          "type": "audio",
+          "src": "https://www.dropbox.com/scl/fi/v0m82smqb5u2671k6bxuv/example_3.mp4?rlkey=n03p4taidj6wdjq213jnblz2n&st=q3rf6yu4&dl=1"
+      }
+  ]
+}
